@@ -1,0 +1,36 @@
+<section class="section text-gray-600 body-font relative shadow-lg">
+    <div class="flex flex-col text-center w-full mb-10">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mt-4 mb-2 text-gray-900">
+            {{ 'homepage.title' | translate }}
+        </h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">{{ 'homepage.subtitle' | translate }}</p>
+    </div>
+    <app-error-message *ngIf="(textKey && messageType)" [textKey]="textKey" [messageType]="messageType" />
+    <form class="wisercat-form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="container px-5 pt-10 pb-10 mx-auto">
+            <div class="lg:w-1/2 md:w-2/3 mx-auto flex flex-wrap -m-2">
+                <app-user-input class="input-field p-2 w-1/2" name="firstName" [form]="userForm" />
+                <app-user-input class="input-field p-2 w-1/2" name="lastName" [form]="userForm" />
+                <app-user-input class="input-field p-2 w-1/2" name="email" [form]="userForm" type="email" />
+                <app-user-input class="input-field p-2 w-1/2" name="workingExperience" [form]="userForm"
+                    type="number" />
+                <div class="flex w-full justify-end">
+                    <div class="p-2 mt-2">
+                        <button
+                            class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                            type="submit">
+                            {{ 'homepage.button-submit' | translate }}
+                        </button>
+                    </div>
+                    <div class="p-2 mt-2">
+                        <button
+                            class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                            type="button" (click)="onReset()">
+                            {{ 'homepage.button-reset' | translate }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

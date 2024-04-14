@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    background: #2196f3;
+    color: #ffffff
+}
+
+.success {
+    background: #4caf50;
+    color: #ffffff
+}
+
+.error {
+    background: #e53935;
+    color: #ffffff
+}

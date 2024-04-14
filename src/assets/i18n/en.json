@@ -1,0 +1,27 @@
+{
+    "index.title": "WisercatForms",
+    "homepage.title": "Employee Information Form",
+    "homepage.subtitle": "Please fill in all the fields that are below",
+    "homepage.toaster-message-reset-success": "Form was reset successfully!",
+    "homepage.button-submit": "Submit Form",
+    "homepage.button-reset": "Reset Form",
+    "homepage.input-field-label.firstName": "Name",
+    "homepage.input-field-placeholder.firstName": "Name",
+    "homepage.input-field.error.required.firstName": "Name is required",
+    "homepage.input-field-label.lastName": "Surname",
+    "homepage.input-field-placeholder.lastName": "Surname",
+    "homepage.input-field.error.required.lastName": "Surname is required",
+    "homepage.input-field.error.minlength.lastName": "Surname must be at least 4 characters",
+    "homepage.input-field-label.email": "Email",
+    "homepage.input-field-placeholder.email": "Email",
+    "homepage.input-field.error.required.email": "Email is required",
+    "homepage.input-field.error.email": "Email must be correct",
+    "homepage.input-field-label.workingExperience": "Working Experience",
+    "homepage.input-field-placeholder.workingExperience": "Working Experience",
+    "homepage.input-field.error.workingExperience": "Working Experience should be positive and have at most 1 number after comma",
+    "homepage.input-field.error.required.workingExperience": "Working Experience is required",
+    "error-message.info": "Form was reset successfully!",
+    "error-message.success": "Form was submitted successfully!",
+    "error-message.error": "Form was not submitted and has errors!"
+  }
+  

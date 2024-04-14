@@ -1,0 +1,22 @@
+<div [formGroup]="form">
+    <label class="leading-7 text-sm text-gray-600" for="name">
+        {{ 'homepage.input-field-label.' + name | translate }}
+    </label>
+
+    <input
+        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+        [id]="name" [type]="type" [name]="name" [formControlName]="name"
+        placeholder="{{ 'homepage.input-field-placeholder.' + name | translate }}">
+    <p class="text-[red]"
+        *ngIf="form.submitted || form.controls[name].invalid && (form.controls[name].dirty || form.controls[name].touched)">
+        <span *ngIf="form.controls[name].errors?.[name]">
+            {{'homepage.input-field.error.' + name | translate }}
+        </span>
+        <span *ngIf="form.controls[name].errors?.['required']">
+            {{'homepage.input-field.error.required.' + name | translate }}
+        </span>
+        <span *ngIf="form.controls[name].errors?.['minlength']">
+            {{'homepage.input-field.error.minlength.' + name | translate }}
+        </span>
+    </p>
+</div>
