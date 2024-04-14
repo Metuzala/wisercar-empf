@@ -50,23 +50,16 @@ export class HomepageComponent {
     if (type === "info") {
       this.textKey = 'error-message.info';
       this.messageType = "info"
-      return;
-    }
-
-    if (type === 'success') {
+    } else if (type === 'success') {
       this.textKey = 'error-message.success';
       this.messageType = 'success';
-
-      return;
-    }
-
-    if (type === 'error') {
+    } else if (type === 'error') {
       this.textKey = 'error-message.error';
       this.messageType = 'error';
-
-      return;
+    } else {
+      this.clearErrorMessageType();
     }
-    this.clearErrorMessageType();
+    setTimeout(() => this.clearErrorMessageType(), 5000);
   }
 
   private clearErrorMessageType(): void {
